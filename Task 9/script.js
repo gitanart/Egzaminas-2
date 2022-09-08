@@ -20,7 +20,7 @@ class Movie {
         wasExpensive() {
              return this.budget >= 100000000 ;
             }
-        }
+}
 
 let myMovie = new Movie('Prisukamas apelsinas','Stanley Kubrick', 100000000);
 console.log(myMovie.wasExpensive())

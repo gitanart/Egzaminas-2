@@ -21,6 +21,16 @@ const users = [
 ];
 
 
-const filterDogOwers = (users) => {
-    return users = true;
-}
+const filterDogOwers = users.filter (user => {
+    return user.hasDog == true;
+})
+
+console.log(filterDogOwers);
+
+
+
+const filterAdults = users.filter(user => {
+  return user.age >= 18;
+})
+  
+console.log(filterAdults);
