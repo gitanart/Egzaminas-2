@@ -5,3 +5,6 @@ subtraction(a, b) - priima du skaičius ir grąžina jų skirtumą.
 multiplication(a, b) - priima du skaičius ir grąžina jų daugybos rezultatą;
 division(a, b) - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
+
+
+const myCalculator = new
