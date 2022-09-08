@@ -10,3 +10,10 @@ const audi = {
   year: 2005,
   color: 'white',
 };
+
+const showObjectKeys = (obj, key) => {
+  const newObj = {...obj};
+  delete newObj[key];
+  return newObj;
+}
+console.log(showObjectKeys(audi));
