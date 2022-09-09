@@ -29,6 +29,8 @@ console.log(filterDogOwers);
 
 
 
+
+
 const filterAdults = users.filter(user => {
   return user.age >= 18;
 })
