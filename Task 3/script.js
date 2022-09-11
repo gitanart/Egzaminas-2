@@ -12,3 +12,23 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'https://api.github.com/users';
+
+const myRequest = fetch(ENDPOINT);
+
+myRequest
+    .then((res) => res.json())
+    .then((data) => {
+     appendData(data);
+    });
+    
+    function appendData(data) {
+        const mainContainer = document.getElementById('output');
+        for (let i = 0; i < data.length; i++) {
+            const li = document.createElement('li');
+            li.innerHTML = data[i].username;
+            li.classList.add('item');
+            li.dataset.userId = data[i].id;
+            li.addEventListener('click', (event) => getPosts(event));
+            mainContainer.appendChild(li);
+        }
+    }

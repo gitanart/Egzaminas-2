@@ -8,3 +8,29 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+const form = document.querySelector('form');
+const searchInput = document.getElementById('search');
+const output = document.getElementById('output');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const kilograms = Number(searchInput.value);
+    const pounds = weightConvert(kilograms); 
+    
+
+    output.textContent = `${pounds} pounds`;
+    
+
+});
+    
+   
+const converter = (search) => {
+
+}
+
+
+const weightConvert = (kilograms) => {
+    return kilograms * 2.2046;
+}
+
