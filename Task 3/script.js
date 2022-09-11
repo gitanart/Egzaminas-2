@@ -18,5 +18,17 @@ const myRequest = fetch(ENDPOINT);
 myRequest
     .then((res) => res.json())
     .then((data) => {
-     console.log(data);
+     appendData(data);
     });
+    
+    function appendData(data) {
+        const mainContainer = document.getElementById('output');
+        for (let i = 0; i < data.length; i++) {
+            const li = document.createElement('li');
+            li.innerHTML = data[i].username;
+            li.classList.add('item');
+            li.dataset.userId = data[i].id;
+            li.addEventListener('click', event)
+            mainContainer.appendChild(li);
+        }
+    }

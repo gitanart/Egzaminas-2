@@ -14,7 +14,7 @@ const btnState = document.getElementById('btn__state');
 btnElement.onclick = function () {
     count++;
     btnState.innerHTML = count;
-}
+};
 
   
 
