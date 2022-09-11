@@ -28,7 +28,7 @@ myRequest
             li.innerHTML = data[i].username;
             li.classList.add('item');
             li.dataset.userId = data[i].id;
-            li.addEventListener('click', event)
+            li.addEventListener('click', (event) => getPosts(event));
             mainContainer.appendChild(li);
         }
     }
